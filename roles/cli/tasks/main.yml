@@ -1,4 +1,13 @@
 - name: install cli apps
+  become: "yes"
   apt:
       name: "{{ item }}"
   with_items: "{{ cli_apps }}"
+
+- name: install fzf
+  block:
+      - git:
+          repo: "https://github.com/junegunn/fzf.git"
+          depth: 1
+          dest: "~/.fzf"
+      - shell: ~/.fzf/install --all
