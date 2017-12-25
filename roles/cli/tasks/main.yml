@@ -1,0 +1,4 @@
+- name: install cli apps
+  apt:
+      name: "{{ item }}"
+  with_items: "{{ cli_apps }}"
