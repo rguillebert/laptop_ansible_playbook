@@ -1,8 +1,14 @@
 - name: install cli apps
-  become: "yes"
+  become: true
   apt:
       name: "{{ item }}"
   with_items: "{{ cli_apps }}"
+
+- name: set shell to zsh
+  become: true
+  user:
+      name: "{{ username }}"
+      shell: /bin/zsh
 
 - name: install fzf
   block:

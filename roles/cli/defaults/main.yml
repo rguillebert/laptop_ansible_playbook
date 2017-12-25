@@ -2,3 +2,4 @@ cli_apps:
     - vim
     - git
     - tmux
+    - zsh
