@@ -4,6 +4,13 @@
       name: "{{ item }}"
   with_items: "{{ cli_apps }}"
 
+- name: set vim up
+  block:
+      - copy:
+          src: ".vimrc"
+          dest: "/home/{{ username }}/.vimrc"
+      - shell: vim +PluginInstall +qall!
+
 - name: set shell to zsh
   become: true
   user:
