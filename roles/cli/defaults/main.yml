@@ -3,3 +3,4 @@ cli_apps:
     - git
     - tmux
     - zsh
+    - silversearcher-ag
