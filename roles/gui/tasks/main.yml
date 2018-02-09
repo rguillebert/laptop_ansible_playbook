@@ -3,6 +3,7 @@
       name: "{{ item }}"
   with_items:
       - "{{ gui_apps }}"
+  become: true
 
 - name: Copy i3 config
   copy:
