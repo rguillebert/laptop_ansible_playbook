@@ -3,3 +3,8 @@
       name: "{{ item }}"
   with_items:
       - "{{ gui_apps }}"
+
+- name: Copy i3 config
+  copy:
+        src: "i3config"
+        dest: "/home/{{ username }}/.i3/config"
