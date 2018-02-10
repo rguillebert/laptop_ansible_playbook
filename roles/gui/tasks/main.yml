@@ -8,7 +8,7 @@
 - name: Copy i3 config
   copy:
         src: "i3config"
-        dest: "/home/{{ username }}/.i3/config"
+        dest: "/home/{{ username }}/.config/i3/config"
 
 - name: Install Steam
   apt:
