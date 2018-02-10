@@ -9,3 +9,8 @@
   copy:
         src: "i3config"
         dest: "/home/{{ username }}/.i3/config"
+
+- name: Install Steam
+  apt:
+        deb: "https://steamcdn-a.akamaihd.net/client/installer/steam.deb"
+  become: true
