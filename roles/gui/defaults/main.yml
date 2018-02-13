@@ -1,3 +1,4 @@
 gui_apps:
     - i3
     - shutter
+    - redshift
